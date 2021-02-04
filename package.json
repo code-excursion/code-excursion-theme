@@ -1,0 +1,47 @@
+{
+  "name": "theme-name",
+  "description": "Theme description.",
+  "license": "GPL-2.0+",
+  "author": {
+    "name": "required",
+    "email": "support@required.ch",
+    "url": "https://required.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wearerequired/theme-name.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.12.1",
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.12.1",
+    "@wearerequired/browserslist-config": "0.1.0",
+    "@wearerequired/eslint-config": "1.5.1",
+    "@wearerequired/postcss-config": "0.1.1",
+    "@wearerequired/stylelint-config": "1.5.1",
+    "@wordpress/eslint-plugin": "7.3.0",
+    "babel-loader": "8.1.0",
+    "concurrently": "5.3.0",
+    "core-js": "3.6.5",
+    "eslint": "7.12.1",
+    "normalize.css": "8.0.1",
+    "postcss-cli": "7.1.2",
+    "stylelint": "13.7.2",
+    "stylelint-config-wordpress": "17.0.0",
+    "terser-webpack-plugin": "4.2.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "4.1.0"
+  },
+  "scripts": {
+    "build:css": "NODE_ENV=production postcss assets/css/src/*.css -d assets/css",
+    "build:js": "NODE_ENV=production webpack",
+    "build": "concurrently \"npm:build:*\"",
+    "watch:css": "NODE_ENV=development postcss --watch assets/css/src/*.css -d assets/css",
+    "watch:js": "webpack --watch",
+    "watch": "concurrently \"npm:watch:*\"",
+    "lint-js": "eslint .",
+    "lint-js:fix": "npm run lint-js -- --fix",
+    "lint-css": "stylelint .",
+    "lint-css:fix": "npm run lint-css -- --fix"
+  }
+}

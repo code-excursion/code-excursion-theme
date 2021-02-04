@@ -1,0 +1,45 @@
+.alignleft {
+	float: left;
+	margin: 0 1.25em 1.25em 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 1.25em 1.25em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto 1.25em auto;
+}
+
+.alignwide,
+.alignfull {
+	width: 100vw;
+	max-width: 100vw;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: calc( 0rem - var( --size__site-padding ) );
+
+	@media screen and ( min-width: 800px ) and ( max-width: 1199px ) {
+		margin-left: calc( -100vw / 2 + ( var( --size__site-content ) / 2) );
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.alignwide {
+	@media screen and ( min-width: 1200px ) {
+		width: var( --size__site-wrap );
+		margin-left: calc( ( ( var( --size__site-content ) - var( --size__site-wrap ) ) / 2 ) );
+	}
+}
+
+.alignfull {
+	@media screen and ( min-width: 1200px ) {
+		margin-left: calc( -100vw / 2 + ( var( --size__site-content ) / 2) );
+	}
+}

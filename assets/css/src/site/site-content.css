@@ -1,0 +1,4 @@
+.site-main {
+	max-width: var( --size__site-content );
+	margin: 0 auto;
+}

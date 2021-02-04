@@ -1,0 +1,15 @@
+.entry-meta,
+.entry-footer {
+	margin: 1.25rem 0;
+	font-size: .875rem;
+
+	a {
+		color: rgba( var( --color__black ), .6 );
+		text-decoration: none;
+	}
+}
+
+.cat-links,
+.tags-links {
+	margin: 0 .625rem .625rem 0;
+}

@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	/* Fallback for when there is no custom background color defined. */
+	background: var( --color__background-body );
+}
+
+body,
+input,
+textarea,
+select,
+button {
+	font-family: var( --font__main );
+	color: var( --color__black );
+	font-size: 1em;
+	line-height: 1.5625;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+	max-width: calc( var( --size__site-wrap ) + ( var( --size__site-padding ) * 2) );
+	margin: 0 auto;
+	padding-left: var( --size__site-padding );
+	padding-right: var( --size__site-padding );
+}

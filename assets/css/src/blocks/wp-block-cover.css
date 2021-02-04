@@ -1,0 +1,14 @@
+.wp-block-cover {
+	margin-bottom: 5%;
+
+	.wp-block-cover__inner-container {
+		width: var( --size__site-content );
+		max-width: 90%;
+		margin: auto;
+		text-align: center;
+	}
+
+	h2 {
+		max-width: 100%;
+	}
+}

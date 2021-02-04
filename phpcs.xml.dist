@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="Theme Name">
+	<description>The coding standard for Theme Name.</description>
+
+	<rule ref="Required" />
+
+	<file>.</file>
+
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="is_theme" value="true" />
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="theme-name"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="Required\ThemeName\Theme"/>
+				<element value="theme_name"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
+		<properties>
+			<property name="forbiddenAnnotations" type="array" extend="true">
+				<element value="@since"/>
+			</property>
+		</properties>
+	</rule>
+
+</ruleset>

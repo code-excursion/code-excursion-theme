@@ -1,0 +1,26 @@
+:root {
+	--color__brand-primary: #e41b13;
+	--color__black: #111;
+	--color__white: #fff;
+
+	--color__background-body: #fff;
+	--color__background-screen: #f1f1f1;
+	--color__background-hr: #ccc;
+	--color__background-button: var( --color__brand-primary );
+	--color__background-pre: #eee;
+	--color__background-ins: #fff9c0;
+
+	--color__text-screen: var( --color__brand-primary );
+	--color__text-input: var( --color__black );
+	--color__text-input-focus: var( --color__black );
+	--color__link: var( --color__brand-primary );
+	--color__link-visited: rgba( var( --color__brand-primary ), .75 );
+	--color__link-hover: var( --color__black );
+	--color__text-main: var( --color__black );
+
+	--color__border-button: var( --color__brand-primary );
+	--color__border-button-hover: var( --color__brand-primary );
+	--color__border-button-focus: var( --color__brand-primary );
+	--color__border-input: #ccc;
+	--color__border-abbr: #666;
+}

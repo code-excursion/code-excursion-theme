@@ -1,0 +1,9 @@
+.site-header {
+	padding: .625rem 0;
+}
+
+.custom-logo {
+	width: 50%;
+	max-width: 300px;
+	max-height: 100px;
+}

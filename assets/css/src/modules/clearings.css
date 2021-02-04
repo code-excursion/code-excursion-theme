@@ -1,0 +1,12 @@
+.clear,
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+.site-footer {
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}

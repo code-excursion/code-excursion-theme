@@ -1,0 +1,145 @@
+.site-navigation {
+	display: block;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+			color: var( --color__link-hover );
+		}
+	}
+
+	a {
+		display: block;
+		padding: .625em 0;
+		text-decoration: none;
+	}
+
+	@media screen and ( min-width: 800px ) {
+		.menu-toggle {
+			display: none;
+		}
+
+		ul {
+			display: block;
+		}
+
+		.nav-main > ul > li {
+			float: left;
+
+			&:not(:last-child) {
+				margin-right: 1.25em;
+			}
+		}
+
+		.sub-menu {
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			z-index: -1;
+			top: 100%;
+			left: 50%;
+			min-width: 200px;
+			max-width: 100%;
+			background: var( --color__white );
+			border: 1px solid rgba( 0, 0, 0, .1 );
+			border-radius: 3px;
+			transition: all 240ms ease-in-out;
+			transform: translate3d( -50%, -10px, 0 );
+
+			li:not(:last-child) {
+				border-bottom: 1px solid rgba( 0, 0, 0, .1 );
+			}
+
+			a {
+				padding: .625em 1.25em;
+			}
+
+			&::after,
+			&::before {
+				bottom: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+
+			&::after {
+				border-color: rgba( 255, 255, 255, 0 );
+				border-bottom-color: #fff;
+				border-width: 10px;
+				margin-left: -10px;
+			}
+
+			&::before {
+				border-color: rgba( 0, 0, 0, 0 );
+				border-bottom-color: rgba( 0, 0, 0, .15 );
+				border-width: 11px;
+				margin-left: -11px;
+			}
+		}
+
+		li:hover,
+		li:focus {
+			.sub-menu {
+				visibility: visible;
+				z-index: 4;
+				opacity: 1;
+				box-shadow: 0 0 10px rgba( 0, 0, 0, .1 );
+				transform: translate3d( -50%, 0, 0 );
+			}
+		}
+	}
+
+	@media screen and ( max-width: 799px ) {
+		.sub-menu {
+			margin-left: .625em;
+		}
+	}
+
+	/* stylelint-disable selector-class-pattern */
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: var( --color__link-hover );
+	}
+	/* stylelint-enable selector-class-pattern */
+}
+
+/* Small menu. */
+.menu-toggle,
+.site-navigation.toggled ul {
+	display: block;
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

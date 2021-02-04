@@ -1,0 +1,23 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: var( --color__text-main );
+	font-family: var( --font__main );
+	font-size: 1em;
+	line-height: var( --font__line-height-body );
+}
+
+.has-small-font-size {
+	font-size: .875em;
+}
+
+.has-large-font-size {
+	font-size: 1.5em;
+}
+
+.has-huge-font-size,
+.has-larger-font-size {
+	font-size: 2.25em;
+}

@@ -1,0 +1,4 @@
+/**/node_modules/*
+*.*
+LICENSE
+!assets/css/src/**/*.css

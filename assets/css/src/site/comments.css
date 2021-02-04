@@ -1,0 +1,40 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comment-list {
+	margin: 0;
+	list-style: none;
+
+	.comment-body {
+		margin-bottom: 1.25rem;
+	}
+
+	.children {
+		margin-left: 1.875rem;
+	}
+}
+
+.comment-meta {
+	margin-bottom: .625rem;
+	padding-left: 3.125rem;
+
+	a:not(.comment-edit-link) {
+		color: rgba( var( --color__black ), .6 );
+		text-decoration: none;
+	}
+}
+
+.comment-author {
+	.avatar {
+		float: left;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin: .1875rem 0 0 -3.125rem;
+		border-radius: 50%;
+	}
+}

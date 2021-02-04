@@ -1,0 +1,17 @@
+{
+  "name": "wearerequired/theme-name",
+  "description": "Theme description.",
+  "type": "wordpress-theme",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "required gmbh",
+      "email": "info@required.com"
+    }
+  ],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
